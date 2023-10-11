@@ -9,7 +9,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     ciphertext = rc4.encrypt(plaintext,key)
     # print(ciphertext)
     s.sendall(ciphertext.encode())
-    data = s.recv(1014)
+    data = s.recv(1024)
 
 print(f"Received {data!r}")
 
